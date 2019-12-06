@@ -1,0 +1,11 @@
+D:\GIT\strings-arrays-lzrandr\week3homework\week3homework\bin\Debug\netcoreapp3.0\week3homework.exe
+D:\GIT\strings-arrays-lzrandr\week3homework\week3homework\bin\Debug\netcoreapp3.0\week3homework.deps.json
+D:\GIT\strings-arrays-lzrandr\week3homework\week3homework\bin\Debug\netcoreapp3.0\week3homework.runtimeconfig.json
+D:\GIT\strings-arrays-lzrandr\week3homework\week3homework\bin\Debug\netcoreapp3.0\week3homework.runtimeconfig.dev.json
+D:\GIT\strings-arrays-lzrandr\week3homework\week3homework\bin\Debug\netcoreapp3.0\week3homework.dll
+D:\GIT\strings-arrays-lzrandr\week3homework\week3homework\bin\Debug\netcoreapp3.0\week3homework.pdb
+D:\GIT\strings-arrays-lzrandr\week3homework\week3homework\obj\Debug\netcoreapp3.0\week3homework.csprojAssemblyReference.cache
+D:\GIT\strings-arrays-lzrandr\week3homework\week3homework\obj\Debug\netcoreapp3.0\week3homework.AssemblyInfoInputs.cache
+D:\GIT\strings-arrays-lzrandr\week3homework\week3homework\obj\Debug\netcoreapp3.0\week3homework.AssemblyInfo.cs
+D:\GIT\strings-arrays-lzrandr\week3homework\week3homework\obj\Debug\netcoreapp3.0\week3homework.dll
+D:\GIT\strings-arrays-lzrandr\week3homework\week3homework\obj\Debug\netcoreapp3.0\week3homework.pdb
