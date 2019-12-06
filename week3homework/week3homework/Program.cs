@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 
 namespace week3homework
@@ -7,8 +8,7 @@ namespace week3homework
     {
         static void Main(string[] args)
         {
-
-            //   1. Write a method that to remove the nth index character from a nonempty string.
+            //1. Write a method that to remove the nth index character from a nonempty string.
             //RemoveLetter();
             //2.Write a method that to remove the characters which have odd index values of a given string.
             //RemoveOddIndex();
@@ -16,7 +16,8 @@ namespace week3homework
             //UpperLower();
             //4.Write a method that reverses a string if it's length is a multiple of 4
             //Reversed();
-
+            //5.Write method to convert a given string to all uppercase if it contains at least 2 uppercase characters in the first 4 characters.
+            IfUppercase();
 
             //   1. Write a method that to remove the nth index character from a nonempty string.
             static void RemoveLetter()
@@ -30,7 +31,6 @@ namespace week3homework
                 cuvant = sb.ToString();
                 Console.WriteLine($"Noul cuvant este {cuvant}");
             }
-
             //2.Write a method that to remove the characters which have odd index values of a given string.
             static void RemoveOddIndex()
             {
@@ -47,7 +47,6 @@ namespace week3homework
                 }
                 Console.WriteLine($"Noul cuvant este {noulcuvant}");
             }
-
             //3.Write a method that takes input from the user and displays that input back in upper and lower cases.
            static void UpperLower()
             {
@@ -71,20 +70,39 @@ namespace week3homework
                 {
                     for (int i = 0; i < sb.Length; i++)
                     {
-                    noulcuvant += sb[sb.Length - i - 1];
+                        noulcuvant += sb[sb.Length - i - 1];
                     }
                     Console.WriteLine($"Noul cuvant este {noulcuvant}");
-                } 
-                else
-                { 
-                Console.WriteLine($"Cuvantul este {cuvant}");
                 }
-                
+                else
+                {
+                    Console.WriteLine($"Cuvantul este {cuvant}");
+                }
             }
-
             //5.Write method to convert a given string to all uppercase if it contains at least 2 uppercase characters in the first 4 characters.
-
-
+            static void IfUppercase()
+            {
+                Console.WriteLine("Scrieti un cuvant");
+                String cuvant = Console.ReadLine();
+                StringBuilder sb = new StringBuilder(cuvant);
+                int literamare=0;
+                for (int i = 0; i < 4; i++)
+                {
+                    if (char.IsUpper(sb[i]))
+                    {
+                        literamare += 1;
+                    }
+                }
+                if (literamare > 1)
+                {
+                    String noulcuvantupper = cuvant.ToUpper();
+                    Console.WriteLine($"Noul cuvant este {noulcuvantupper}");
+                }
+                else 
+                {
+                    Console.WriteLine($"Cuvantul este {cuvant}");
+                }
+            }
         }
     }
 }
