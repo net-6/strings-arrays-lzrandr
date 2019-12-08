@@ -17,7 +17,15 @@ namespace week3homework
             //4.Write a method that reverses a string if it's length is a multiple of 4
             //Reversed();
             //5.Write method to convert a given string to all uppercase if it contains at least 2 uppercase characters in the first 4 characters.
-            IfUppercase();
+            // IfUppercase();
+            // 6.Write a method that to remove a newline. (nu sunt sigur ca am inteles cerinta)
+            // DeleteNewLine();
+            // 7.Write a method to display formatted text(width= 50) as output.
+            // For example: If I have a text that's 134 characters long, the formatted string should have maximum of 50 characters per line.
+            // In this case we will have 3 lines of text.
+            // Split50Ch();
+            //8. Write a method that formats a number with a percentage
+            Percentage();
 
             //   1. Write a method that to remove the nth index character from a nonempty string.
             static void RemoveLetter()
@@ -103,6 +111,51 @@ namespace week3homework
                     Console.WriteLine($"Cuvantul este {cuvant}");
                 }
             }
+
+            // 6.Write a method that to remove a newline. (nu sunt sigur ca am inteles cerinta)
+            static void DeleteNewLine()
+            {
+               
+                String fraza = " First line\n Second Line\n Third Line\n Forth Line";
+                Console.WriteLine(fraza);
+               // cuvant = cuvant.Replace(Environment.NewLine, " ");
+                fraza = fraza.Replace("\n", String.Empty);
+                Console.WriteLine("-------------------");
+                Console.WriteLine(fraza);
+
+            }
+
+            // 7.Write a method to display formatted text(width= 50) as output.
+            // For example: If I have a text that's 134 characters long, the formatted string should have maximum of 50 characters per line.
+            // In this case we will have 3 lines of text.
+            static void Split50Ch()
+            {
+
+                String fraza = "This is a very loooooooooooooooooooooooooooooooooooooooong string. This is a very loooooooooooooooooooooooooooooooooooooooong string.";
+                Console.WriteLine(fraza);
+                StringBuilder sb = new StringBuilder(fraza);
+                Console.WriteLine(sb.Length);
+                for (int i = 1; i < sb.Length; i++)
+                {
+              
+                    if (i % 50 == 0)
+                    sb.Insert(i , "\n");
+
+                }
+                Console.WriteLine("-------------------");
+                Console.WriteLine(sb.ToString());
+
+            }
+
+            //8. Write a method that formats a number with a percentage
+            static void Percentage()
+            {
+                String number = "0.8";
+                Console.WriteLine(String.Format("Valoare procentuala: {0:P2}.", number));
+            }
+
+
+
         }
     }
 }
