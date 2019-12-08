@@ -154,8 +154,6 @@ namespace week3homework
                 Console.WriteLine(String.Format("Valoare procentuala: {0:P2}.", number));
             }
 
-
-
         }
     }
 }
