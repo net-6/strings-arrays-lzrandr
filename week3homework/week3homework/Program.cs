@@ -36,7 +36,17 @@ namespace week3homework
             //SumOfDigits();
             //14.You will get a text from where you will need to clean the text because it
             // contains a lot of strange characters that don’t belong there ( ^ <, > &+ @%$)
-            Cleaner();
+            // Cleaner();
+            // 15. Write a method to add 'ing' at the end of a given string (length should be at least 3).
+            //If the given string already ends with 'ing' then add 'ly' instead. 
+            //If the string length of the given string is less than 3, leave it unchanged.
+            // Ing();
+            // 16. You have some text that contains your email address. And you want to hide that. 
+            //You decide to censor your email: to replace all characters in it with asterisks ('*') except the domain. 
+            //Assume your email address will always be in format [username]@[domain]. 
+            //You need to replace the username with asterisks of equal number of letters and keep the domain unchanged. 
+            //You will get as input the email address you need to obfuscate
+            Obfuscate();
 
             //   1. Write a method that to remove the nth index character from a nonempty string.
             static void RemoveLetter()
@@ -61,13 +71,13 @@ namespace week3homework
                 {
                     if (sb[i] % 2 == 0)
                     {
-                       noulcuvant += sb[i];
+                        noulcuvant += sb[i];
                     }
                 }
                 Console.WriteLine($"Noul cuvant este {noulcuvant}");
             }
             //3.Write a method that takes input from the user and displays that input back in upper and lower cases.
-           static void UpperLower()
+            static void UpperLower()
             {
                 Console.WriteLine("Scrieti un cuvant");
                 String cuvant = Console.ReadLine();
@@ -104,7 +114,7 @@ namespace week3homework
                 Console.WriteLine("Scrieti un cuvant");
                 String cuvant = Console.ReadLine();
                 StringBuilder sb = new StringBuilder(cuvant);
-                int literamare=0;
+                int literamare = 0;
                 for (int i = 0; i < 4; i++)
                 {
                     if (char.IsUpper(sb[i]))
@@ -117,7 +127,7 @@ namespace week3homework
                     String noulcuvantupper = cuvant.ToUpper();
                     Console.WriteLine($"Noul cuvant este {noulcuvantupper}");
                 }
-                else 
+                else
                 {
                     Console.WriteLine($"Cuvantul este {cuvant}");
                 }
@@ -126,10 +136,10 @@ namespace week3homework
             // 6.Write a method that to remove a newline. (nu sunt sigur ca am inteles cerinta)
             static void DeleteNewLine()
             {
-               
+
                 String fraza = " First line\n Second Line\n Third Line\n Forth Line";
                 Console.WriteLine(fraza);
-               // cuvant = cuvant.Replace(Environment.NewLine, " ");
+                // cuvant = cuvant.Replace(Environment.NewLine, " ");
                 fraza = fraza.Replace("\n", String.Empty);
                 Console.WriteLine("-------------------");
                 Console.WriteLine(fraza);
@@ -148,9 +158,9 @@ namespace week3homework
                 Console.WriteLine(sb.Length);
                 for (int i = 1; i < sb.Length; i++)
                 {
-              
+
                     if (i % 50 == 0)
-                    sb.Insert(i , "\n");
+                        sb.Insert(i, "\n");
 
                 }
                 Console.WriteLine("-------------------");
@@ -184,7 +194,7 @@ namespace week3homework
                 while (true)
                 {
                     Console.WriteLine("Scrieti un cuvant");
-                    String cuv = Console.ReadLine();    
+                    String cuv = Console.ReadLine();
                     char[] cuvant = cuv.ToCharArray();
                     Console.WriteLine("Scrieti un numar");
                     int nr = int.Parse(Console.ReadLine());
@@ -194,7 +204,7 @@ namespace week3homework
                     }
                     Console.WriteLine(cuvant);
                 }
-              
+
             }
 
             //12.Write a method to capitalize first and last letters of each word of a given string.
@@ -206,7 +216,7 @@ namespace week3homework
                     String cuv = Console.ReadLine();
                     char[] cuvant = cuv.ToCharArray();
                     cuvant[0] = char.ToUpper(cuvant[0]);
-                    cuvant[cuv.Length-1] = char.ToUpper(cuvant[cuv.Length-1]);
+                    cuvant[cuv.Length - 1] = char.ToUpper(cuvant[cuv.Length - 1]);
                     Console.WriteLine(cuvant);
                 }
             }
@@ -218,10 +228,10 @@ namespace week3homework
                 {
                     Console.WriteLine("Scrieti un cuvant");
                     String cuv = Console.ReadLine();
-                    char[] cuvant = cuv.ToCharArray();    
-                    int Suma=0;
+                    char[] cuvant = cuv.ToCharArray();
+                    int Suma = 0;
                     for (int i = 0; i < cuv.Length; i++)
-                    { 
+                    {
                         Suma = int.Parse(cuvant[i].ToString()) + Suma;
                     }
                     Console.WriteLine(Suma);
@@ -233,11 +243,67 @@ namespace week3homework
             static void Cleaner()
             {
                 String cuv = "Hi ^> there << I’m + telling %% you, you & need % to$ do &your $homeworks.@Hate ^ me ^ % now % and % thank % me & later.";
-                char[] ToTrim = { '^', '<', ',', '>', '&', '+', '@', '%', '$'};
+                char[] ToTrim = { '^', '<', ',', '>', '&', '+', '@', '%', '$' };
                 string cuvnou = cuv.TrimStart(ToTrim);
                 Console.WriteLine(cuv);
                 Console.WriteLine(cuvnou);
             }
+
+            // 15. Write a method to add 'ing' at the end of a given string (length should be at least 3).
+            //If the given string already ends with 'ing' then add 'ly' instead. 
+            //If the string length of the given string is less than 3, leave it unchanged.
+            static void Ing()
+            {
+                while (true)
+                {
+                    Console.WriteLine("Scrieti un cuvant");
+                    String cuv = Console.ReadLine();
+                    if (cuv.Length >= 3)
+                    {
+                        if (cuv.Substring(cuv.Length - 3, 3) == "ing")
+                        {
+                            cuv = cuv + "ly";
+                            Console.WriteLine(cuv);
+                        }
+                        else
+                        {
+                            cuv = cuv + "ing";
+                        }
+                    }
+                    Console.WriteLine(cuv);
+                }
+               
+            }
+
+            // 16. You have some text that contains your email address. And you want to hide that. 
+            //You decide to censor your email: to replace all characters in it with asterisks ('*') except the domain. 
+            //Assume your email address will always be in format [username]@[domain]. 
+            //You need to replace the username with asterisks of equal number of letters and keep the domain unchanged. 
+            //You will get as input the email address you need to obfuscate
+            static void Obfuscate()
+            {
+                while (true)
+                {
+                    Console.WriteLine("Scrieti un cuvant");
+                    String cuv = Console.ReadLine();
+                    char[] car = cuv.ToCharArray();
+                    int nr = car.Length;
+                    for (
+                        int i = 0; i < nr; i++)
+                    {
+                        if (car[i].ToString() != "@")
+                        {
+                            car[i] = char.Parse("*");
+                        }
+                        else 
+                        {
+                            break;   
+                        }
+                    }
+                    Console.WriteLine(car);
+                }
+            }
+
         }
     }
 }
