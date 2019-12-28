@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GIT\\strings-arrays-lzrandr\\week3homework\\week3homework\\week3homework.csproj": {}
+    "D:\\GIT\\week3\\strings-arrays-lzrandr\\week3homework\\week3homework\\week3homework.csproj": {}
   },
   "projects": {
-    "D:\\GIT\\strings-arrays-lzrandr\\week3homework\\week3homework\\week3homework.csproj": {
+    "D:\\GIT\\week3\\strings-arrays-lzrandr\\week3homework\\week3homework\\week3homework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GIT\\strings-arrays-lzrandr\\week3homework\\week3homework\\week3homework.csproj",
+        "projectUniqueName": "D:\\GIT\\week3\\strings-arrays-lzrandr\\week3homework\\week3homework\\week3homework.csproj",
         "projectName": "week3homework",
-        "projectPath": "D:\\GIT\\strings-arrays-lzrandr\\week3homework\\week3homework\\week3homework.csproj",
-        "packagesPath": "C:\\Users\\andrei.lazar\\.nuget\\packages\\",
-        "outputPath": "D:\\GIT\\strings-arrays-lzrandr\\week3homework\\week3homework\\obj\\",
+        "projectPath": "D:\\GIT\\week3\\strings-arrays-lzrandr\\week3homework\\week3homework\\week3homework.csproj",
+        "packagesPath": "C:\\Users\\QAZ\\.nuget\\packages\\",
+        "outputPath": "D:\\GIT\\week3\\strings-arrays-lzrandr\\week3homework\\week3homework\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andrei.lazar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\QAZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -46,7 +46,16 @@ namespace week3homework
             //Assume your email address will always be in format [username]@[domain]. 
             //You need to replace the username with asterisks of equal number of letters and keep the domain unchanged. 
             //You will get as input the email address you need to obfuscate
-            Obfuscate();
+            //Obfuscate();
+            //17. Write a method to get a string made of the first 2 and the last 2 chars from a given a string.
+            //If the string length is less than 2, return instead of the empty string.
+            //FirstLastChar();
+            //18. Write a method to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself.
+            // ReplaceWithFirstChar();
+            //19. Write a method to get a single string from two given strings, separated by a space and swap the first two characters of each string.
+            //  Input: 'abc', 'xyz'
+            // Output: 'xyc abz'
+            SwapChar();
 
             //   1. Write a method that to remove the nth index character from a nonempty string.
             static void RemoveLetter()
@@ -303,6 +312,124 @@ namespace week3homework
                     Console.WriteLine(car);
                 }
             }
+
+            //17. Write a method to get a string made of the first 2 and the last 2 chars from a given a string.
+            //If the string length is less than 2, return instead of the empty string.
+
+            static void FirstLastChar()
+            {
+                while (true)
+                {
+                    Console.WriteLine("Scrieti un cuvant");
+                    String cuv = Console.ReadLine();
+                    char[] car = cuv.ToCharArray();
+                    int nr = car.Length;
+                    String cuvnou = "";
+                    if (nr >= 2)
+                    {
+                        for (int i = 0; i < 2; i++)
+                        {
+                            cuvnou = cuvnou + car[i];
+                        }
+                        for (int i = nr-2; i < nr; i++)
+                        {
+                            cuvnou = cuvnou + car[i];
+                        }
+                        Console.WriteLine(cuvnou);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Empty String");
+                    }
+                }
+            }
+
+            //18. Write a method to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself.
+            static void ReplaceWithFirstChar()
+            {
+                while (true)
+                {
+                    Console.WriteLine("Scrieti un cuvant");
+                    String cuv = Console.ReadLine();
+                    char[] car = cuv.ToCharArray();
+                    int nr = car.Length;
+                    for (
+                        int i = 1; i < nr; i++)
+                    {
+                        
+                       if (car[i] == car[0])
+                        {
+                            car[i] = char.Parse("$");
+                        }
+                    }
+                    Console.WriteLine(car);
+                }
+            }
+
+            //19. Write a method to get a single string from two given strings, separated by a space and swap the first two characters of each string.
+            //  Input: 'abc', 'xyz'
+            // Output: 'xyc abz'
+            static void SwapChar()
+            {
+                while (true)
+                {
+                    Console.WriteLine("Scrieti primul cuvant");
+                    String cuv1 = Console.ReadLine();
+                    char[] car1 = cuv1.ToCharArray();
+                    Console.WriteLine("Scrieti al doilea cuvant");
+                    String cuv2 = Console.ReadLine();
+                    char[] car2 = cuv2.ToCharArray();
+                    int nr1 = car1.Length;
+                    int nr2 = car2.Length;
+                    String cuvnou1 = "";
+                    String cuvnou2 = "";
+                    for (int i = 0; i < 2; i++)
+                    {
+                        cuvnou1 = cuvnou1 + car2[i];
+                    }
+                    for (int i = 2; i < nr1; i++)
+                    {
+                        cuvnou1 = cuvnou1 + car1[i];
+                    }
+                    for (int i = 0; i < 2; i++)
+                    {
+                        cuvnou2 = cuvnou2 + car1[i];
+                    }
+                    for (int i = 2; i < nr2; i++)
+                    {
+                        cuvnou2 = cuvnou2 + car2[i];
+                    }
+                    Console.WriteLine(cuvnou1 + cuvnou2);
+                }
+            }
+
+            //20. Write a method that takes a list of words and returns the length of the longest one.
+            static void LongestString()
+            {
+                while (true)
+                {
+                    Console.WriteLine("Scrieti un cuvantul 1");
+                    String cuv = Console.ReadLine();
+                    int nr1 = cuv.Length;
+                    Console.WriteLine("Scrieti un cuvantul 2");
+                    String cuv = Console.ReadLine();
+                    int nr2 = cuv.Length;
+                    Console.WriteLine("Scrieti un cuvantul 3");
+                    String cuv = Console.ReadLine();
+                    int nr3 = cuv.Length;
+                    Console.WriteLine("Scrieti un cuvantul 4");
+                    String cuv = Console.ReadLine();
+                    int nr4 = cuv.Length;
+                    Console.WriteLine("Scrieti un cuvantul 5");
+                    String cuv = Console.ReadLine();
+                    int nr5 = cuv.Length;
+
+                    int max = int.MaxValue(for)
+
+                    Console.WriteLine(car);
+                }
+            }
+
 
         }
     }
