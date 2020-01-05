@@ -64,8 +64,22 @@ namespace week3homework
             //  Output: 'The lyrics is poor!'
             //  Input: 'The lyrics is good!'
             //  Output: 'The lyrics is poor!'
-
-            Notpoor();
+            // Notpoor();
+            // 22. Write a method to get the last part of a string before a specified character.
+            // Input: https://www.siit.com/net-exercises
+            //        -
+            // Output:  https://www.siit.com/net
+            // GetLastPartChar();
+            // 23. Write a method to check whether a string starts with specified characters
+            // input: awesome string
+            //   a
+            // output: Yes, starts with a
+            // StartWithSpecChar();
+            // 24.Write a method to count occurrences of a substring in a string
+            // input: alabala portocala
+            // ala
+            // output : 3
+            NoOfSubstring();
 
 
 
@@ -466,6 +480,80 @@ namespace week3homework
                         cuvnou = cuv1.Substring(0, cuv1.IndexOf("good!")) + "poor";
                     }
                     Console.WriteLine(cuvnou);
+                }
+            }
+
+            // 22. Write a method to get the last part of a string before a specified character.
+            // Input: https://www.siit.com/net-exercises
+            //        -
+            // Output:  https://www.siit.com/net
+
+            static void GetLastPartChar()
+            {
+                while (true)
+                {
+                    Console.WriteLine("Scrieti primul cuvant");
+                    String cuv1 = Console.ReadLine();
+                    Console.WriteLine("Scrieti caracterul special");
+                    String carspec = Console.ReadLine();
+                    String cuvnou = "";
+                    if (cuv1.Contains(carspec))
+                    {
+                        cuvnou = cuv1.Substring(0, cuv1.IndexOf(carspec));
+                        Console.WriteLine(cuvnou);
+                    }
+                    
+                }
+            }
+
+            // 23. Write a method to check whether a string starts with specified characters
+            // input: awesome string
+            //   a
+            // output: Yes, starts with a
+            static void StartWithSpecChar()
+            {
+                while (true)
+                {
+                    Console.WriteLine("Scrieti primul cuvant");
+                    String cuv1 = Console.ReadLine();
+                    Console.WriteLine("Scrieti caracterul");
+                    String carspec = Console.ReadLine();
+                    String cuvnou = "";
+                    if (cuv1.Contains(carspec) && cuv1.IndexOf(carspec) == 0)
+                    {
+                        cuvnou = cuv1.Substring(0, cuv1.IndexOf(carspec));
+                        Console.WriteLine($"Yes, starts with {carspec}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Nope, it not starts with {carspec}");
+                    }
+
+                }
+            }
+
+            // 24.Write a method to count occurrences of a substring in a string
+            // input: alabala portocala
+            // ala
+            // output : 3
+            static void NoOfSubstring()
+            {
+                while (true)
+                {
+                    Console.WriteLine("Scrieti primul cuvant");
+                    String cuv1 = Console.ReadLine();
+                    Console.WriteLine("Scrieti substringul");
+                    String substr = Console.ReadLine();
+                    int no = 0;
+                    for (int i = 0; i < (cuv1.Length - substr.Length); i++)
+                    {
+                        String substr2 = cuv1.Substring(i, substr.Length);
+                        if ((substr2).Contains(substr))
+                        {
+                            no = no + 1;
+                        }
+                    }
+                    Console.WriteLine(no);
                 }
             }
         }
