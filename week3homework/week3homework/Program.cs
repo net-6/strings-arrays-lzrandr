@@ -455,19 +455,19 @@ namespace week3homework
                     Console.WriteLine("Scrieti primul cuvant");
                     String cuv1 = Console.ReadLine();
                     char[] car1 = cuv1.ToCharArray();
-                    if (cuv1.Contains("not"))
+                    String cuvnou = "";
+                    if (cuv1.Contains("not") && cuv1.IndexOf("not") < cuv1.IndexOf("poor"))
                     {
-                        cuv1.Replace("not that poor",  "poor");
-                        Console.WriteLine(cuv1);
-                    }
-                    Console.WriteLine(cuv1);
+                        cuvnou = cuv1.Substring(0, cuv1.IndexOf("not")) + "poor!";
 
+                    }
+                    else
+                    {
+                        cuvnou = cuv1.Substring(0, cuv1.IndexOf("good!")) + "poor";
+                    }
+                    Console.WriteLine(cuvnou);
                 }
             }
         }
-
-
-
     }
-    
 }
