@@ -55,7 +55,19 @@ namespace week3homework
             //19. Write a method to get a single string from two given strings, separated by a space and swap the first two characters of each string.
             //  Input: 'abc', 'xyz'
             // Output: 'xyc abz'
-            SwapChar();
+            //SwapChar();
+            //20. Write a method that takes a list of words and returns the length of the longest one.
+            //LongestString();
+            // 21. Write a method to find the first appearance of the substring 'not' and 'poor' from a given string,
+            //if 'not' follows the 'poor', replace the whole 'not'...'poor' substring with 'good'.Return the resulting string.
+            //  Input: 'The lyrics is not that poor!'
+            //  Output: 'The lyrics is poor!'
+            //  Input: 'The lyrics is good!'
+            //  Output: 'The lyrics is poor!'
+
+            Notpoor();
+
+
 
             //   1. Write a method that to remove the nth index character from a nonempty string.
             static void RemoveLetter()
@@ -409,28 +421,53 @@ namespace week3homework
                 while (true)
                 {
                     Console.WriteLine("Scrieti un cuvantul 1");
-                    String cuv = Console.ReadLine();
-                    int nr1 = cuv.Length;
+                    String cuv1 = Console.ReadLine();
+                    int nr1 = cuv1.Length;
                     Console.WriteLine("Scrieti un cuvantul 2");
-                    String cuv = Console.ReadLine();
-                    int nr2 = cuv.Length;
+                    String cuv2 = Console.ReadLine();
+                    int nr2 = cuv2.Length;
                     Console.WriteLine("Scrieti un cuvantul 3");
-                    String cuv = Console.ReadLine();
-                    int nr3 = cuv.Length;
+                    String cuv3 = Console.ReadLine();
+                    int nr3 = cuv3.Length;
                     Console.WriteLine("Scrieti un cuvantul 4");
-                    String cuv = Console.ReadLine();
-                    int nr4 = cuv.Length;
+                    String cuv4 = Console.ReadLine();
+                    int nr4 = cuv4.Length;
                     Console.WriteLine("Scrieti un cuvantul 5");
-                    String cuv = Console.ReadLine();
-                    int nr5 = cuv.Length;
-
-                    int max = int.MaxValue(for)
-
-                    Console.WriteLine(car);
+                    String cuv5 = Console.ReadLine();
+                    int nr5 = cuv5.Length;
+                    int max = Math.Max(nr1, Math.Max(nr2, Math.Max(nr3, Math.Max(nr4, nr5))));
+                    Console.WriteLine($"Cel mai lung cuvant introdus are {max} litere");
                 }
             }
 
 
+            // 21. Write a method to find the first appearance of the substring 'not' and 'poor' from a given string,
+            //if 'not' follows the 'poor', replace the whole 'not'...'poor' substring with 'good'.Return the resulting string.
+            //  Input: 'The lyrics is not that poor!'
+            //  Output: 'The lyrics is poor!'
+            //  Input: 'The lyrics is good!'
+            //  Output: 'The lyrics is poor!'
+
+            static void Notpoor()
+            {
+                while (true)
+                {
+                    Console.WriteLine("Scrieti primul cuvant");
+                    String cuv1 = Console.ReadLine();
+                    char[] car1 = cuv1.ToCharArray();
+                    if (cuv1.Contains("not"))
+                    {
+                        cuv1.Replace("not that poor",  "poor");
+                        Console.WriteLine(cuv1);
+                    }
+                    Console.WriteLine(cuv1);
+
+                }
+            }
         }
+
+
+
     }
+    
 }
