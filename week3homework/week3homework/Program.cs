@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace week3homework
 {
@@ -79,11 +80,18 @@ namespace week3homework
             // input: alabala portocala
             // ala
             // output : 3
-            NoOfSubstring();
+            //  NoOfSubstring();
+            //25. Write a method to swap comma and dot in a string.
+            // Input: "32.054,23"
+            // Output: "32,054.23"
+            //  SwapComma();
+            //26. Write a method to remove spaces from a given string.
+            RemoveSpaces();
 
 
 
-            //   1. Write a method that to remove the nth index character from a nonempty string.
+
+                //   1. Write a method that to remove the nth index character from a nonempty string.
             static void RemoveLetter()
             {
                 Console.WriteLine("Scrieti un cuvant");
@@ -554,6 +562,47 @@ namespace week3homework
                         }
                     }
                     Console.WriteLine(no);
+                }
+            }
+
+            //25. Write a method to swap comma and dot in a string.
+            // Input: "32.054,23"
+            // Output: "32,054.23"
+            static void SwapComma()
+            {
+                while (true)
+                {
+                    Console.WriteLine("Scrieti un numar");
+                    String cuv = Console.ReadLine();
+                    char[] car = cuv.ToCharArray();
+                    int nr = car.Length;
+                    for (
+                        int i = 0; i < nr; i++)
+                    {
+                        if (cuv[i].ToString() == ".")
+                        {
+                            car[i] = char.Parse(",");
+                        }
+                        else if (car[i].ToString() == ",")
+                        {
+                            car[i] = char.Parse(".");
+                        }
+                    }
+                    Console.WriteLine(car);
+                }
+            }
+
+            //26. Write a method to remove spaces from a given string.
+            static void RemoveSpaces()
+            {
+                while (true)
+                {
+                    Console.WriteLine("Scrieti o propozzitie");
+                    String cuv = Console.ReadLine();
+                    char[] car = cuv.ToCharArray();
+                    int nr = car.Length;
+                    String cuva = Regex.Replace(cuv, @"\s+", "");
+                    Console.WriteLine(cuva);
                 }
             }
         }
